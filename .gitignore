@@ -1,0 +1,28 @@
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build directory
+dist/
+
+# Parcel cache
+.cache/
+
+# TypeScript compiled files
+*.tsbuildinfo
+
+# Ignore .env file
+.env
+
+# Ignore test coverage reports
+coverage/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+.DS_Store
