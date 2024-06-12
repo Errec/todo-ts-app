@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $light-theme-background;
+    &.dark-theme {
+        background-color: $dark-theme-background;
+    }
+}
+
+button {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    @include transition(all);
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+input {
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+    border-bottom: 1px solid #ccc;
+}
