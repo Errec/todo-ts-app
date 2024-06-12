@@ -26,7 +26,7 @@ export const TaskTemplate = (tasks: Task[], onAddTask: (name: string) => void, o
     const input = Input('Add a new task', 'New task input');
     input.id = 'new-task';
 
-    const addButton = Button('Add Task', () => {
+    const addButton = Button('fas fa-plus', () => {
         try {
             if (input.value.trim()) {
                 onAddTask(input.value.trim());

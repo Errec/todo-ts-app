@@ -1,6 +1,9 @@
-export const Button = (text: string, onClick: () => void, ariaLabel: string) => {
+// src/components/atoms/Button.ts
+export const Button = (iconClass: string, onClick: () => void, ariaLabel: string) => {
     const button = document.createElement('button');
-    button.innerText = text;
+    const icon = document.createElement('i');
+    icon.className = iconClass;
+    button.appendChild(icon);
 
     // Add accessibility attributes
     button.setAttribute('aria-label', ariaLabel);

@@ -25,7 +25,7 @@ export const TaskItem = (task: Task, onToggle: () => void, onDelete: () => void,
     nameInput.setAttribute('aria-label', 'Edit task name');
     nameInput.style.display = 'none';
 
-    const editButton = Button('Edit', () => {
+    const editButton = Button('fas fa-pencil-alt', () => {
         label.style.display = 'none';
         nameInput.style.display = 'block';
         nameInput.focus();
@@ -44,7 +44,7 @@ export const TaskItem = (task: Task, onToggle: () => void, onDelete: () => void,
         }
     });
 
-    const deleteButton = Button('Delete', onDelete, 'Delete task');
+    const deleteButton = Button('fas fa-trash', onDelete, 'Delete task');
 
     container.appendChild(checkbox);
     container.appendChild(label);
