@@ -7,6 +7,11 @@ body {
     &.dark-theme {
         background-color: $dark-theme-background;
     }
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 32px;
+    padding: 12px 0 0 12px;
+    border-radius: 8px;
 }
 
 button {
@@ -33,4 +38,5 @@ input {
     justify-content: space-between;
     padding: 0.5em;
     border-bottom: 1px solid #ccc;
+    text-align: left;
 }
