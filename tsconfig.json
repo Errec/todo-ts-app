@@ -1,26 +1,22 @@
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "commonjs",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "outDir": "./dist",
-      "rootDir": "./src",
-      "sourceMap": true,
-      "resolveJsonModule": true,
-      "moduleResolution": "node",
-      "baseUrl": "./",
-      "paths": {
-        "@atoms/*": ["src/components/atoms/*"],
-        "@molecules/*": ["src/components/molecules/*"],
-        "@organisms/*": ["src/components/organisms/*"],
-        "@templates/*": ["src/components/templates/*"],
-        "@pages/*": ["src/components/pages/*"]
-      }
-    },
-    "include": ["src"],
-    "exclude": ["node_modules", "dist"]
-  }
-  
+  "compilerOptions": {
+    "target": "es5",                               
+    "module": "commonjs",                          
+    "strict": true,                                
+    "esModuleInterop": true,                       
+    "skipLibCheck": true,                          
+    "forceConsistentCasingInFileNames": true,      
+    "outDir": "./dist",                            
+    "rootDir": "./src",                            
+    "resolveJsonModule": true,                     
+    "jsx": "react",                                
+    "lib": ["dom", "es2015"]                       
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
