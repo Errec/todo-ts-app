@@ -15,7 +15,8 @@
   "devDependencies": {
     "jest": "^26.0.0",
     "ts-jest": "^26.0.0",
-    "sass": "^1.32.0"
+    "sass": "^1.32.0",
+    "@types/jest": "^26.0.0"
   },
   "jest": {
     "preset": "ts-jest",
