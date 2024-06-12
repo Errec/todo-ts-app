@@ -1,11 +1,9 @@
-export const Button = (text: string, onClick: () => void) => {
+export const Button = (text: string, onClick: () => void, ariaLabel: string) => {
     const button = document.createElement('button');
     button.innerText = text;
-    button.addEventListener('click', onClick);
-    
+
     // Add accessibility attributes
-    button.setAttribute('role', 'button');
-    button.setAttribute('aria-label', text);
-    
+    button.setAttribute('aria-label', ariaLabel);
+    button.addEventListener('click', onClick);
     return button;
 };
