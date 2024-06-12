@@ -47,7 +47,7 @@ This is a simple to-do list application built using Atomic Design principles and
 
 ## Project Structure
 
-\`\`\`plaintext
+```plaintext
 todo-ts-app/
 ├── src/
 │   ├── assets/
@@ -74,45 +74,45 @@ todo-ts-app/
 ├── package.json
 ├── README.md
 └── tsconfig.json
-\`\`\`
+```
 
 ## Installation
 
 1. Clone the repository:
-   \`\`\`bash
+   ```bash
    git clone <repository_url>
-   \`\`\`
+   ```
 2. Navigate to the project directory:
-   \`\`\`bash
+   ```bash
    cd todo-ts-app
-   \`\`\`
+   ```
 3. Install dependencies:
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 ## Usage
 
 ### Development
 
 To start the development server, run:
-\`\`\`bash
+```bash
 npm start
-\`\`\`
+```
 
 ### Build
 
 To build the project, run:
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+```
 
 ### Tests
 
 To run the unit tests, run:
-\`\`\`bash
+```bash
 npm test
-\`\`\`
+```
 
 ## Accessibility Features
 
