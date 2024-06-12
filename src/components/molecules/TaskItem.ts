@@ -23,13 +23,33 @@ export const TaskItem = (task: Task, onToggle: () => void, onDelete: () => void,
     const nameInput = document.createElement('input');
     nameInput.value = task.name;
     nameInput.setAttribute('aria-label', 'Edit task name');
-    nameInput.addEventListener('change', () => onEdit(nameInput.value));
+    nameInput.style.display = 'none';
+
+    const editButton = Button('Edit', () => {
+        label.style.display = 'none';
+        nameInput.style.display = 'block';
+        nameInput.focus();
+    }, 'Edit task');
+
+    nameInput.addEventListener('blur', () => {
+        onEdit(nameInput.value);
+        label.innerText = nameInput.value;
+        label.style.display = 'block';
+        nameInput.style.display = 'none';
+    });
+
+    nameInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            nameInput.blur();
+        }
+    });
 
     const deleteButton = Button('Delete', onDelete, 'Delete task');
 
     container.appendChild(checkbox);
     container.appendChild(label);
     container.appendChild(nameInput);
+    container.appendChild(editButton);
     container.appendChild(deleteButton);
 
     return container;

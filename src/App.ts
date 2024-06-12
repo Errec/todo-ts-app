@@ -1,6 +1,9 @@
 import { HomePage } from './components/pages/HomePage';
 
-// When the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    HomePage();
+    try {
+        HomePage();
+    } catch (error) {
+        console.error('Error initializing app:', error);
+    }
 });

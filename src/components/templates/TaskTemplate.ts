@@ -22,15 +22,18 @@ export const TaskTemplate = (tasks: Task[], onAddTask: (name: string) => void, o
     const formLabel = document.createElement('label');
     formLabel.id = 'add-task-form';
     formLabel.setAttribute('for', 'new-task');
-    formLabel.innerText = 'Add a new task';
 
     const input = Input('Add a new task', 'New task input');
     input.id = 'new-task';
 
     const addButton = Button('Add Task', () => {
-        if (input.value.trim()) {
-            onAddTask(input.value.trim());
-            input.value = '';
+        try {
+            if (input.value.trim()) {
+                onAddTask(input.value.trim());
+                input.value = '';
+            }
+        } catch (error) {
+            console.error('Error adding task:', error);
         }
     }, 'Add task');
 

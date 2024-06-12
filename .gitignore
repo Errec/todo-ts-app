@@ -12,6 +12,7 @@ dist/
 
 # Parcel cache
 .cache/
+.parcel-cache/
 
 # TypeScript compiled files
 *.tsbuildinfo
